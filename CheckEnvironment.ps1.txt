@@ -1,0 +1,23 @@
+# Check JAVA_HOME variable
+$javaHome = [Environment]::GetEnvironmentVariable("JAVA_HOME")
+if ($javaHome -ne $null) {
+    Write-Host "JAVA_HOME is set to: $javaHome"
+} else {
+    Write-Host "JAVA_HOME is not set."
+}
+
+# Check M2_HOME variable
+$m2Home = [Environment]::GetEnvironmentVariable("M2_HOME")
+if ($m2Home -ne $null) {
+    Write-Host "M2_HOME is set to: $m2Home"
+} else {
+    Write-Host "M2_HOME is not set."
+}
+
+# Check Java availability in command prompt
+Write-Host "Java version:"
+java -version
+
+# Check Maven availability in command prompt
+Write-Host "Maven version:"
+mvn -v
